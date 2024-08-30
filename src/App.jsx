@@ -21,8 +21,7 @@ const App = () => {
     const savedContacts = JSON.parse(localStorage.getItem('contacts'))
     if (savedContacts && savedContacts.length > 0) {
       setContacts(savedContacts)
-    } else {
- 
+    } else { 
       setContacts(initialContacts)
     }
   }, [])
