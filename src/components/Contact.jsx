@@ -6,10 +6,14 @@ import { faUser, faPhone } from '@fortawesome/free-solid-svg-icons'
 const Contact = ({ contact, onDelete }) => {
   return (
     <div className={styles.contactItem}>
-      <span>
-      <FontAwesomeIcon icon={faUser} /> {contact.name} 
-      <FontAwesomeIcon icon={faPhone} /> {contact.number}
-      </span>
+      <div className={styles.contactInfo}>
+        <span>
+          <FontAwesomeIcon icon={faUser} /> {contact.name}
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faPhone} /> {contact.number}
+        </span>
+      </div>
       <button onClick={onDelete} className={styles.deleteButton}>Delete</button>
     </div>
   )
