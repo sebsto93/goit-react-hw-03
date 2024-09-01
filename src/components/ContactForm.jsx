@@ -5,8 +5,8 @@ import styles from './ContactForm.module.css'
 
 
 const validationSchema = Yup.object({
-  name: Yup.string().min(3).max(50).required('Required'),
-  number: Yup.string().min(3).max(50).required('Required')
+  name: Yup.string().matches(/^[aA-zZ\s]+$/, 'Name can only contain letters').min(3).max(50).required('Required'),
+  number: Yup.string().matches(/^[0-9-]+$/, 'Number can only contain numbers with "-"').min(3).max(50).required('Required')
 })
 
 const ContactForm = ({ onAddContact }) => {
